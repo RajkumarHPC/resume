@@ -3,113 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajkumar Sharma - HPC Delivery & Support Associate Consultant</title>
+    <title>Rajkumar Sharma - HPC Engineer Resume</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; max-width: 800px; margin: auto; padding: 20px; }
-        .container { background: white; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 10px; }
-        h1 { color: #1a3c5e; border-bottom: 3px solid #4a90e2; padding-bottom: 10px; }
-        .contact { display: flex; gap: 20px; margin: 20px 0; font-size: 14px; }
-        .section { margin: 30px 0; }
-        .section-title { font-size: 20px; color: #1a3c5e; border-left: 4px solid #4a90e2; padding-left: 15px; margin-bottom: 15px; font-weight: bold; }
-        ul { list-style: none; padding-left: 0; }
-        li { margin: 8px 0; position: relative; padding-left: 20px; }
-        li:before { content: '▹'; color: #4a90e2; position: absolute; left: 0; }
-        .job { font-weight: bold; color: #1a3c5e; }
-        .date { color: #666; font-style: italic; }
-        .edit-mode * { border: 1px dashed #4a90e2 !important; background: #fff8e1; }
-        .controls { text-align: center; margin: 20px 0; }
-        button { background: #4a90e2; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer; font-size: 14px; }
-        button:hover { background: #357abd; }
-        @media print { .controls { display: none; } body { background: white; } }
-        [contenteditable="true"] { cursor: text; min-height: 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            border-bottom: 3px solid #1a3a52;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+        }
+        
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a3a52;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a3a52;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .entry {
+            margin-bottom: 15px;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
+        .entry-title {
+            font-weight: bold;
+            color: #1a3a52;
+            font-size: 15px;
+        }
+        
+        .entry-subtitle {
+            color: #0066cc;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .entry-date {
+            color: #666;
+            font-size: 13px;
+            font-style: italic;
+        }
+        
+        .entry-company {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 6px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .skill-item {
+            background: #f9f9f9;
+            padding: 10px 15px;
+            border-left: 4px solid #0066cc;
+            font-size: 14px;
+        }
+        
+        .award {
+            background: #fffbf0;
+            padding: 10px 15px;
+            border-left: 4px solid #ff9800;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .award-title {
+            font-weight: bold;
+            color: #1a3a52;
+        }
+        
+        .award-date {
+            color: #666;
+            font-size: 13px;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+        
+        .project-item {
+            background: #f0f7ff;
+            padding: 12px 15px;
+            border-left: 4px solid #0066cc;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .project-item strong {
+            color: #1a3a52;
+        }
+        
+        .edit-mode {
+            display: none;
+        }
+        
+        .btn-container {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-edit {
+            background: #0066cc;
+            color: white;
+        }
+        
+        .btn-edit:hover {
+            background: #0052a3;
+        }
+        
+        .btn-print {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .btn-print:hover {
+            background: #45a049;
+        }
+        
+        .btn-save {
+            background: #ff9800;
+            color: white;
+            display: none;
+        }
+        
+        .btn-save:hover {
+            background: #e68900;
+        }
+        
+        .btn-cancel {
+            background: #999;
+            color: white;
+            display: none;
+        }
+        
+        .btn-cancel:hover {
+            background: #777;
+        }
+        
+        [contenteditable] {
+            outline: none;
+        }
+        
+        .edit-mode [contenteditable] {
+            background: #fffacd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .edit-mode .edit-mode {
+            display: block;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+            .btn-container {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container" id="resume">
-        <header>
-            <h1 contenteditable="true">RAJKUMAR SHARMA</h1>
-            <p style="font-size: 18px; color: #4a90e2; margin-bottom: 10px;" contenteditable="true">HPC Delivery & Support Associate Consultant</p>
-            <div class="contact" contenteditable="false">
-                <span>Rajkumar05.net@gmail.com</span>
-                <span>+91 8179921831</span>
-                <span>Chennai / Gopalganj, Bihar</span>
-                <a href="https://github.com/RajkumarHPC" contenteditable="false">github.com/RajkumarHPC</a>
-                <a href="https://linkedin.com/in/rajkumar-sharma-76158517b" contenteditable="false">LinkedIn</a>
+    <div class="container">
+        <div class="btn-container">
+            <button class="btn-edit" onclick="toggleEditMode()">✎ Edit</button>
+            <button class="btn-print" onclick="window.print()">🖨️ Print</button>
+            <button class="btn-save" onclick="saveResume()">💾 Save</button>
+            <button class="btn-cancel" onclick="toggleEditMode()">✕ Cancel</button>
+        </div>
+        
+        <div class="header">
+            <div class="name" contenteditable="false">Rajkumar Sharma</div>
+            <div class="title" contenteditable="false">HPC Associate Consultant</div>
+            <div class="contact-info">
+                <span>📧 <span contenteditable="false">Rajkumar05.net@gmail.com</span></span>
+                <span>📞 <span contenteditable="false">+91 8179921831</span></span>
+                <span>📍 <span contenteditable="false">Gopalganj, Bihar</span></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/rajkumar-sharma-76158517b/" target="_blank" contenteditable="false">LinkedIn</a></span>
             </div>
-        </header>
-
+        </div>
+        
         <div class="section">
             <div class="section-title">Professional Summary</div>
-            <p contenteditable="true">Motivated HPC Engineer with 5+ years experience managing large-scale clusters at Atos/Eviden (NSM). Expertise in Slurm scheduling, InfiniBand networking, Podman/Pacemaker, Ansible automation, and data center operations. Delivered VSSC, Airbus Bangalore projects with HPL benchmarking and 24/7 support.</p>
+            <p contenteditable="false" style="font-size: 14px; line-height: 1.6; margin-bottom: 8px;">A motivated and tech-savvy HPC Engineer with 5+ years of experience in High Performance Computing System Administration.</p>
+            <ul>
+                <li contenteditable="false">Continuous learner committed to staying updated with technology trends</li>
+                <li contenteditable="false">Exceptional client service and communication skills with proactive system administration approach</li>
+                <li contenteditable="false">Focused on removing barriers to efficient resource utilization and advancing research capabilities</li>
+            </ul>
         </div>
-
+        
         <div class="section">
             <div class="section-title">Experience</div>
-            <div contenteditable="true">
-                <div class="job">Associate Consultant (HPC Delivery & Support) – Atos/Eviden (NSM)</div>
-                <div class="date">Nov 2021 – Present</div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span>
+                        <div class="entry-title" contenteditable="false">Associate Consultant (HPC Delivery & Support)</div>
+                        <div class="entry-company" contenteditable="false">Eviden / Atos</div>
+                    </span>
+                    <span class="entry-date" contenteditable="false">Nov 2021 – Present</span>
+                </div>
                 <ul>
-                    <li>Deploy/operate/maintain HPC clusters (534+ nodes), InfiniBand topology design, Slurm job queues.</li>
-                    <li>HPL Benchmark testing, patching, automation scripting (Bash/Python/Ansible), on-call troubleshooting.</li>
-                    <li>Tiered user support, documentation, Pacemaker/Podman for portals/services.</li>
+                    <li contenteditable="false">Deliver and support large-scale HPC clusters covering end-to-end deployment, operation, and maintenance to ensure reliable performance for compute-intensive workloads</li>
+                    <li contenteditable="false">Design and implement HPC clusters including server hardware, high-speed interconnects (InfiniBand), and storage; automate provisioning and integrate software stacks with schedulers (Slurm, PBS)</li>
+                    <li contenteditable="false">Develop and execute deployment plans, collaborate with cross-functional teams to align architecture with scientific workloads, perform benchmarking and optimization</li>
+                    <li contenteditable="false">Monitor system health and capacity, manage job queues, and resolve hardware, OS, scheduler, and file system issues through structured incident workflows and onsite interventions</li>
+                    <li contenteditable="false">Apply regular patching and security updates, script automation for routine operations and reporting, and maintain up-to-date documentation and runbooks</li>
+                    <li contenteditable="false">Provide tiered user support and training, assist with job submission and optimization, and participate in on-call rotations for production incident troubleshooting</li>
+                    <li contenteditable="false">Execute HPL benchmark testing and performance validation on HPC clusters to measure peak computational performance and system optimization</li>
+                </ul>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span>
+                        <div class="entry-title" contenteditable="false">Linux Engineer</div>
+                        <div class="entry-company" contenteditable="false">Akshara Enterprises</div>
+                    </span>
+                    <span class="entry-date" contenteditable="false">Aug 2020 – Nov 2021</span>
+                </div>
+                <p style="font-size: 14px; margin-bottom: 6px;" contenteditable="false"><strong>Project:</strong> ANURAG (Advanced Numerical Research and Analysis Group, DRDO) | IBM idataplex cluster (40 TeraFlops, ~3600 cores)</p>
+                <ul>
+                    <li contenteditable="false">Day-to-day oversight of HPC environment operations and 24/7 maintenance support</li>
+                    <li contenteditable="false">Monitoring 280-node IBM system using Ganglia monitoring tool</li>
+                    <li contenteditable="false">Hardware and firmware troubleshooting at IBM X server level</li>
+                    <li contenteditable="false">Network issue resolution, root password recovery, and grub/initrd recovery</li>
+                    <li contenteditable="false">Job management and file system space availability monitoring</li>
+                    <li contenteditable="false">Liaison with system support teams and software vendors for troubleshooting and performance tuning</li>
+                </ul>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span>
+                        <div class="entry-title" contenteditable="false">IT Associate and Projection Technician</div>
+                        <div class="entry-company" contenteditable="false">Cinepolis India Pvt Limited</div>
+                    </span>
+                    <span class="entry-date" contenteditable="false">Jan 2020 – June 2020</span>
+                </div>
+                <ul>
+                    <li contenteditable="false">Systems and LAN infrastructure management</li>
+                    <li contenteditable="false">Troubleshooting Linux and Windows OS with technical support provision</li>
+                    <li contenteditable="false">Network infrastructure administration including firewalls, routers, switches, and wireless devices</li>
+                    <li contenteditable="false">Systems, applications and network performance monitoring and reporting</li>
+                    <li contenteditable="false">Projection, POS and printer-related troubleshooting</li>
                 </ul>
             </div>
         </div>
-
+        
         <div class="section">
-            <div class="section-title">Major Projects</div>
-            <ul contenteditable="true">
-                <li><strong>National Supercomputing Mission – Installed & Support (ATOS/Eviden)</strong></li>
-                <li><strong>VSSC (Vikram Sarabhai Space Centre)</strong> – HPC for aerospace simulations, Thiruvananthapuram.</li>
-                <li><strong>Airbus Digital / Simulation HPC</strong> – Delivery & support @ Airbus, Bengaluru.</li>
-            </ul>
+            <div class="section-title">Awards &amp; Recognition</div>
+            <div class="award">
+                <div class="award-title" contenteditable="false">Gold Accolade Award</div>
+                <div class="award-date" contenteditable="false">2023, 2024, 2025</div>
+                <p style="margin-top: 6px; font-size: 13px;" contenteditable="false"><strong>Atos Global IT Solutions &amp; Services Pvt Ltd.</strong> — Extraordinary effort in NSM project implementation</p>
+            </div>
         </div>
-
-        <div class="section">
-            <div class="section-title">Technical Skills</div>
-            <ul contenteditable="true">
-                <li>HPC Cluster Management • Slurm Workload Scheduler • InfiniBand Networking</li>
-                <li>Ansible Automation • Podman Containers • Pacemaker Clustering</li>
-                <li>Linux SysAdmin • HPL Benchmarking • RAID/Hardware Provisioning</li>
-                <li>Bash/Python Scripting • Network Security/Firewalls</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Awards</div>
-            <ul contenteditable="true">
-                <li>Gold Accolade Award (2023, 2024, 2025)</li>
-            </ul>
-        </div>
-
+        
         <div class="section">
             <div class="section-title">Education</div>
-            <p contenteditable="true">B.Tech equivalent in relevant field; advanced certifications in HPC/Slurm.</p>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>
+                        <div class="entry-title" contenteditable="false">Bachelor of Technology in Mechanical Engineering</div>
+                        <div class="entry-company" contenteditable="false">Nova College of Engineering and Technology, Hyderabad (JNTUH)</div>
+                    </span>
+                    <span class="entry-date" contenteditable="false">2015 – 2019</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-item" contenteditable="false">Linux (RHEL, Ubuntu, CentOS)</div>
+                <div class="skill-item" contenteditable="false">Slurm / PBS Job Schedulers</div>
+                <div class="skill-item" contenteditable="false">InfiniBand / Ethernet Networking</div>
+                <div class="skill-item" contenteditable="false">Ganglia Monitoring System</div>
+                <div class="skill-item" contenteditable="false">Hardware Administration</div>
+                <div class="skill-item" contenteditable="false">Network Troubleshooting</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Major Projects</div>
+            <p style="font-size: 14px; margin-bottom: 12px;" contenteditable="false"><strong>Eviden/Atos (NSM) – Installed and Support:</strong></p>
+            <div class="project-grid">
+                <div class="project-item" contenteditable="false"><strong>PARAM KAMRUPA</strong><br>838 TF @ IIT Guwahati</div>
+                <div class="project-item" contenteditable="false"><strong>PARAM PORUL</strong><br>838 TF @ NIT Trichy</div>
+                <div class="project-item" contenteditable="false"><strong>PARAM GANGA</strong><br>1.67 PF @ IIT Roorkee</div>
+                <div class="project-item" contenteditable="false"><strong>ARUNIKA</strong><br>7.4 PF @ NCMRWF Noida</div>
+                <div class="project-item" contenteditable="false"><strong>ARKA</strong><br>7.4 PF @ IITM Pune</div>
+                <div class="project-item" contenteditable="false"><strong>VSSC HPC Environment</strong><br>HPC Delivery & Support @ Vikram Sarabhai Space Centre, Thiruvananthapuram</div>
+                <div class="project-item" contenteditable="false"><strong>Airbus Bangalore HPC</strong><br>HPC Delivery & Support @ Airbus, Bengaluru</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="skills-grid">
+                <div class="skill-item" contenteditable="false">Hindi</div>
+                <div class="skill-item" contenteditable="false">English</div>
+                <div class="skill-item" contenteditable="false">Tamil</div>
+            </div>
         </div>
     </div>
-
-    <div class="controls">
-        <button onclick="toggleEdit()">✎ Edit</button>
-        <button onclick="window.print()">🖨️ Print/PDF</button>
-        <button onclick="downloadHTML()">💾 Save HTML</button>
-    </div>
-
+    
     <script>
-        let editMode = false;
-        function toggleEdit() {
-            editMode = !editMode;
-            const content = document.querySelectorAll('[contenteditable]');
-            content.forEach(el => el.contentEditable = editMode);
-            document.body.classList.toggle('edit-mode', editMode);
-            document.querySelector('.controls').innerHTML = editMode ? '<button onclick="toggleEdit()">✕ Cancel</button><button onclick="saveAndExit()">Save & Exit</button>' : '<button onclick="toggleEdit()">✎ Edit</button><button onclick="window.print()">🖨️ Print/PDF</button><button onclick="downloadHTML()">💾 Save HTML</button>';
+        const originalContent = document.body.innerHTML;
+        
+        function toggleEditMode() {
+            const container = document.querySelector('.container');
+            const editables = document.querySelectorAll('[contenteditable="false"]');
+            const btnEdit = document.querySelector('.btn-edit');
+            const btnPrint = document.querySelector('.btn-print');
+            const btnSave = document.querySelector('.btn-save');
+            const btnCancel = document.querySelector('.btn-cancel');
+            
+            const isEditing = container.classList.toggle('edit-mode');
+            
+            editables.forEach(el => {
+                if (isEditing) {
+                    el.contentEditable = true;
+                } else {
+                    el.contentEditable = false;
+                }
+            });
+            
+            btnEdit.style.display = isEditing ? 'none' : 'block';
+            btnPrint.style.display = isEditing ? 'none' : 'block';
+            btnSave.style.display = isEditing ? 'block' : 'none';
+            btnCancel.style.display = isEditing ? 'block' : 'none';
         }
-        function saveAndExit() { toggleEdit(); alert('Saved locally - push to GitHub for live update'); }
-        function downloadHTML() {
-            const html = document.documentElement.outerHTML;
-            const blob = new Blob([html], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a'); a.href = url; a.download = 'resume.html'; a.click();
+        
+        function saveResume() {
+            const resumeHTML = document.querySelector('.container').innerHTML;
+            const blob = new Blob([getDownloadHTML()], { type: 'text/html' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Rajkumar_Sharma_Resume.html';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            
+            alert('Resume saved successfully!');
+            toggleEditMode();
+        }
+        
+        function getDownloadHTML() {
+            const container = document.querySelector('.container');
+            const btnContainer = container.querySelector('.btn-container');
+            const containerClone = container.cloneNode(true);
+            containerClone.removeChild(containerClone.querySelector('.btn-container'));
+            
+            const editables = containerClone.querySelectorAll('[contenteditable]');
+            editables.forEach(el => {
+                el.removeAttribute('contenteditable');
+            });
+            
+            return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajkumar Sharma - HPC Engineer Resume</title>
+    <style>
+        ${document.querySelector('style').textContent}
+    </style>
+</head>
+<body>
+    <div class="container">
+        ${containerClone.innerHTML}
+    </div>
+</body>
+</html>`;
         }
     </script>
 </body>
